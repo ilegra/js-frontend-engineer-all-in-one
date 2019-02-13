@@ -1,0 +1,19 @@
+body{
+  background-color: black
+}
+
+.item:hover .card-title
+{
+  color: red !important;
+}
+
+.detail{
+  padding-right: 15px;
+  padding-left: 15px;
+
+
+}
+
+p {
+  color: white;
+}
