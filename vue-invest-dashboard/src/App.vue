@@ -10,19 +10,19 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import appHeader from "./components/Header.vue";
 export default {
   components: {
-    appHeader: Header
+    appHeader
   },
-  created(){
-    this.$store.dispatch('init');
+  created() {
+    this.$store.dispatch("init");
   }
-}
+};
 </script>
 
-<style>
-body{
+<style lang="css">
+body {
   padding: 30px;
 }
 </style>

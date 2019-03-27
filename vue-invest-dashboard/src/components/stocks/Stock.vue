@@ -1,9 +1,10 @@
-<template lang="html">
+<template>
   <div class="col-sm-6 col-md-4">
     <div class="panel panel-success">
       <div class="panel-heading">
         <h3 class="panel-title">
-          {{stock.name}} <small>(Price: {{stock.price}})</small>
+          {{stock.name}}
+          <small>(Price: {{stock.price}})</small>
         </h3>
       </div>
       <div class="panel-body">
@@ -20,25 +21,21 @@
 
 <script>
 export default {
-  props: ['stock'],
-  data(){
+  props: ["stock"],
+  data() {
     return {
       quantity: 0
-    }
+    };
   },
   methods: {
-
-    buyStock(){
+    buyStock() {
       const order = {
         price: this.stock.price,
         quantity: this.quantity,
         name: this.stock.name
-      }
-      this.$store.dispatch('buyStock', order);
+      };
+      this.$store.dispatch("buyStock", order);
     }
   }
-}
+};
 </script>
-
-<style lang="css">
-</style>

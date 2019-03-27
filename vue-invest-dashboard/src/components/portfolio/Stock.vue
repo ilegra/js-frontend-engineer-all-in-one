@@ -1,9 +1,10 @@
-<template lang="html">
+<template>
   <div class="col-sm-6 col-md-4">
     <div class="panel panel-info">
       <div class="panel-heading">
         <h3 class="panel-title">
-          {{stock.name}} <small>(Price: {{stock.price}} | Quantity: {{stock.quantity}})</small>
+          {{ stock.name }}
+          <small>(Price: {{ stock.price }} | Quantity: {{ stock.quantity }})</small>
         </h3>
       </div>
       <div class="panel-body">
@@ -19,16 +20,13 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex';
+import { mapActions } from "vuex";
 export default {
-  props: ['stock'],
-  data(){
+  props: ["stock"],
+  data() {
     return {
-      quantity : this.stock.quantity
-    }
+      quantity: this.stock.quantity
+    };
   }
-}
+};
 </script>
-
-<style lang="css">
-</style>

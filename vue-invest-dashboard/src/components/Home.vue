@@ -1,20 +1,22 @@
-<template lang="html">
-  <div class="">
-    <h1>Control your stocks</h1>
-    <hr />
+<template>
+  <section class="columns">
+    <h1 class="title">{{ title }}</h1>
+    <hr>
     <p>Your Funds: {{ funds }}</p>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      title: "Control your stocks"
+    };
+  },
   computed: {
     funds() {
-      return this.$store.getters.funds
+      return this.$store.getters.funds;
     }
   }
-}
+};
 </script>
-
-<style lang="css">
-</style>
